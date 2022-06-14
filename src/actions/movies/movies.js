@@ -1,7 +1,15 @@
 import moviesData from '../../dataset/movies.json'
 
 exports.getAllMovies = () => {
-    return moviesData
+    if(moviesData != 0 || moviesData != NULL){
+        return moviesData
+    }
+    else {
+        return {
+            message: "Hubo un error al mostrar toda la lista",
+            status: 500
+        }
+    }
 }
 
 exports.getMoviesByName = (name) => {

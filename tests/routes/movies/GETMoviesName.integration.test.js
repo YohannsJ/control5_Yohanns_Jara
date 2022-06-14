@@ -5,11 +5,11 @@ import moviesController from '../../../src/actions/movies/movies'
 
 
 /**
- * El objetivo de este test de integración es probar
- * el endpoint para evaluar si la aplicación responde
+ * Test encargado de evaluar el Endpoint  /api/movies/:name
  */
 
 describe('GET /api/movies/:name', () => {
+    
     afterAll(() => {
         server.close()
     })
